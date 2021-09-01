@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AuthnRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saml2p="urn: oasis:names: tc:SAML: 2.0:protocol" IssueInstant="2021-08-31T15:35:31.3365264+02:00" xmlns="urn:oasis:names:tc:SAML:2.0:protocol">
-  <NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" />
-  <RequestedAuthnContext Comparison="exact" />
-</AuthnRequest>
+<samlp:AuthnRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" ID="ID_545a5491-0d82-424a-afd8-acb6812636af" Version="2.0" IssueInstant="2021-09-01T12:48:33.3029634+02:00" Destination="https://pz.gov.pl/dt/SingleSignOnService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
+  <saml:Issuer>https://klient01.pl</saml:Issuer>
+  <samlp:NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" />
+  <samlp:RequestedAuthnContext Comparison="exact" />
+</samlp:AuthnRequest>

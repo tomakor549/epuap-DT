@@ -13,7 +13,14 @@ namespace ePUAP_DT
     {
         static void Main(string[] args)
         {
-            AuthnRequest request = new AuthnRequest();
+            AuthnRequest request = new AuthnRequest
+            {
+                ID = string.Format("ID_{0}", Guid.NewGuid()),
+                Version = "2.0",
+                IssueInstant = DateTime.Now,
+                Destination = "https://pz.gov.pl/dt/SingleSignOnService",
+                Issuer = "https://klient01.pl"
+            };
 
             XmlSerializer mySerializer = new XmlSerializer(typeof(AuthnRequest));
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ePUAP_DT.Constant;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,13 +11,12 @@ namespace ePUAP_DT.Models
     /// <summary>
     /// SAML2 AuthnRequest model
     /// </summary>
-    [XmlRoot("AuthnRequest", Namespace = "urn:oasis:names:tc:SAML:2.0:protocol")]
+    [XmlRoot("AuthnRequest", Namespace = Namespaces.PROTOCOL)]
     public class AuthnRequest
     {
 
         public AuthnRequest()
         {
-            this.IssueInstant = DateTime.Now;
             this.NameIDPolicy = new NameIDPolicy();
             this.RequestedAuthnContext = new RequestAuthContext();
         }
@@ -31,9 +31,11 @@ namespace ePUAP_DT.Models
                 if (_xmlns == null)
                 {
                     _xmlns = new XmlSerializerNamespaces();
-                    _xmlns.Add("saml2p", "urn: oasis:names: tc:SAML: 2.0:protocol");
+                    _xmlns.Add("saml2p", Namespaces.PROTOCOL);
                 }
-                return _xmlns;
+                //return _xmlns;
+
+                return Namespaces.SerializerNamespaces;
             }
 
             set
@@ -51,8 +53,9 @@ namespace ePUAP_DT.Models
         [XmlAttribute("IssueInstant")]
         public DateTime IssueInstant { get; set; }
 
-        [XmlAttribute("AssertionConsumerServiceURL")]
-        public string AssertionConsumerServiceURL { get; set; }
+        //optional
+        //[XmlAttribute("AssertionConsumerServiceURL")]
+        //public string AssertionConsumerServiceURL { get; set; }
 
         [XmlAttribute("Destination")]
         public string Destination { get; set; }
@@ -60,13 +63,13 @@ namespace ePUAP_DT.Models
         [XmlAttribute("ProtocolBinding")]
         public string ProtocolBinding { get; set; }
 
-        [XmlElement("Issuer", Namespace = "urn:oasis:names:tc:SAML:2.0:assertion")]
+        [XmlElement("Issuer", Namespace = Namespaces.ASSERTION)]
         public string Issuer { get; set; }
 
-        [XmlElement("NameIDPolicy", Namespace = "urn:oasis:names:tc:SAML:2.0:protocol")]
+        [XmlElement("NameIDPolicy", Namespace = Namespaces.PROTOCOL)]
         public NameIDPolicy NameIDPolicy { get; set; }
 
-        [XmlElement("RequestedAuthnContext", Namespace = "urn:oasis:names:tc:SAML:2.0:protocol")]
+        [XmlElement("RequestedAuthnContext", Namespace = Namespaces.PROTOCOL)]
         public RequestAuthContext RequestedAuthnContext { get; set; }
 
     }

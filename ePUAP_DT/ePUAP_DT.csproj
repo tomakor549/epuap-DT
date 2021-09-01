@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ArtifactResolve.cs" />
+    <Compile Include="Constant\Namespaces.cs" />
     <Compile Include="Models\AuthnRequest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
