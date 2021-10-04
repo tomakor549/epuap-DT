@@ -5,3 +5,10 @@ C:\Users\venet\source\repos\ePUAP_DT\ePUAP_DT\obj\Debug\ePUAP_DT.csproj.Assembly
 C:\Users\venet\source\repos\ePUAP_DT\ePUAP_DT\obj\Debug\ePUAP_DT.csproj.CoreCompileInputs.cache
 C:\Users\venet\source\repos\ePUAP_DT\ePUAP_DT\obj\Debug\ePUAP_DT.exe
 C:\Users\venet\source\repos\ePUAP_DT\ePUAP_DT\obj\Debug\ePUAP_DT.pdb
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\bin\Debug\ePUAP_DT.exe.config
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\bin\Debug\ePUAP_DT.exe
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\bin\Debug\ePUAP_DT.pdb
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\obj\Debug\ePUAP_DT.csproj.AssemblyReference.cache
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\obj\Debug\ePUAP_DT.csproj.CoreCompileInputs.cache
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\obj\Debug\ePUAP_DT.exe
+C:\Users\venet\source\repos\epuap-DT\ePUAP_DT\obj\Debug\ePUAP_DT.pdb

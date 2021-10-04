@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<samlp:AuthnRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" ID="ID_545a5491-0d82-424a-afd8-acb6812636af" Version="2.0" IssueInstant="2021-09-01T12:48:33.3029634+02:00" Destination="https://pz.gov.pl/dt/SingleSignOnService" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol">
-  <saml:Issuer>https://klient01.pl</saml:Issuer>
-  <samlp:NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" />
-  <samlp:RequestedAuthnContext Comparison="exact" />
-</samlp:AuthnRequest>
+<saml2p:AuthnRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ID_36c5f1f7-5581-4672-85b6-84dab9b4bad4" Version="2.0" IssueInstant="2021-10-04T13:57:07.8193542+02:00" Destination="https://pz.gov.pl/dt/SingleSignOnService" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol">
+  <Issuer xmlns="urn:oasis:names:tc:SAML:2.0:assertion">https://klient01.pl</Issuer>
+  <saml2p:NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" />
+</saml2p:AuthnRequest>

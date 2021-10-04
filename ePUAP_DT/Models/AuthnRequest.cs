@@ -18,7 +18,7 @@ namespace ePUAP_DT.Models
         public AuthnRequest()
         {
             this.NameIDPolicy = new NameIDPolicy();
-            this.RequestedAuthnContext = new RequestAuthContext();
+            //this.RequestedAuthnContext = new RequestAuthContext();
         }
 
         private XmlSerializerNamespaces _xmlns;
@@ -33,7 +33,7 @@ namespace ePUAP_DT.Models
                     _xmlns = new XmlSerializerNamespaces();
                     _xmlns.Add("saml2p", Namespaces.PROTOCOL);
                 }
-                //return _xmlns;
+                return _xmlns;
 
                 return Namespaces.SerializerNamespaces;
             }
@@ -69,8 +69,8 @@ namespace ePUAP_DT.Models
         [XmlElement("NameIDPolicy", Namespace = Namespaces.PROTOCOL)]
         public NameIDPolicy NameIDPolicy { get; set; }
 
-        [XmlElement("RequestedAuthnContext", Namespace = Namespaces.PROTOCOL)]
-        public RequestAuthContext RequestedAuthnContext { get; set; }
+        //[XmlElement("RequestedAuthnContext", Namespace = Namespaces.PROTOCOL)]
+        //public RequestAuthContext RequestedAuthnContext { get; set; }
 
     }
 
