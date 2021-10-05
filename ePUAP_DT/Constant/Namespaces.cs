@@ -30,7 +30,7 @@ namespace ePUAP_DT.Constant
         // <summary>
         /// XmlDsigSHA512Url namespace
         /// </summary>
-        public const string XmlDsigSHA256Url = "http://www.w3.org/2001/04/xmlenc#sha512";
+        public const string XmlDsigSHA256Url = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256";
 
         /// <summary>
         /// In order to conform to common SAML namespacing, the serializer

@@ -108,7 +108,7 @@ namespace ePUAP_DT.Models
 
             signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigExcC14NTransformUrl;
             //signedXml.SignedInfo.SignatureMethod = SignedXml.XmlDsigRSASHA256Url;
-            signedXml.SignedInfo.SignatureMethod = "http://www.w3.org/2001/04/xmlenc#sha512";
+            signedXml.SignedInfo.SignatureMethod = Namespaces.XmlDsigSHA256Url;
 
 
             // transform
@@ -118,14 +118,13 @@ namespace ePUAP_DT.Models
             var reference = new Reference
             {
                 Uri = "",
-                DigestMethod = Namespaces.XmlDsigSHA256Url
+                DigestMethod = "http://www.w3.org/2001/04/xmlenc#sha256"
             };
             reference.AddTransform(c14transform);
             //reference.DigestMethod = SignedXml.XmlDsigSHA256Url;
 
             // keyinfo
             var keyInfo = new KeyInfo();
-
             keyInfo.AddClause(new KeyInfoX509Data(signatureCertificate));
             signedXml.KeyInfo = keyInfo;
 
@@ -137,7 +136,7 @@ namespace ePUAP_DT.Models
             var signatureXml = signedXml.GetXml();
 
             var mainNode = xmlrequest
-                .DocumentElement.ChildNodes
+                .DocumentElement.ParentNode
                 .Cast<XmlNode>()
                 .FirstOrDefault(n => n.LocalName == "AuthnRequest");
             var signatureNode = mainNode
@@ -148,7 +147,7 @@ namespace ePUAP_DT.Models
 
             // insert it just after BSE
             var importedSignatureXml = xmlrequest.ImportNode(signatureXml, true);
-            mainNode.InsertAfter(firstNode, importedSignatureXml);
+            mainNode.InsertAfter(importedSignatureXml, firstNode);
 
             return xmlrequest.OuterXml;
         }
