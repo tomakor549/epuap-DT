@@ -27,6 +27,11 @@ namespace ePUAP_DT.Constant
         /// </summary>
         public const string XMLDSIG = "http://www.w3.org/2000/09/xmldsig#";
 
+        // <summary>
+        /// XmlDsigSHA512Url namespace
+        /// </summary>
+        public const string XmlDsigSHA256Url = "http://www.w3.org/2001/04/xmlenc#sha512";
+
         /// <summary>
         /// In order to conform to common SAML namespacing, the serializer
         /// needs to be told how do to it

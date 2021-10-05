@@ -30,6 +30,12 @@ namespace ePUAP_DT
             StreamWriter myWriter = new StreamWriter("myFileName.xml");
             mySerializer.Serialize(myWriter, request);
             myWriter.Close();
+
+            //var str = request.GetSignedXML();
+
+            //StreamWriter newWriter = new StreamWriter("newFileName.xml");
+            //mySerializer.Serialize(newWriter, request);
+            //myWriter.Close();
         }
     }
 }
