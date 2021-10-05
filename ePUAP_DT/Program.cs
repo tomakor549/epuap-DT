@@ -60,10 +60,6 @@ namespace ePUAP_DT
             }
 
             var str = request.GetSignedXML(Certificate);
-
-            StreamWriter newWriter = new StreamWriter("newFileName.xml");
-            //mySerializer.Serialize(str);
-            myWriter.Close();
         }
     }
 }
